@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./header.css" />
+    <link rel="stylesheet" href="./my_images.css" />
+    <link rel="stylesheet" href="./bouncing_ball.css" />
+    <title>Generated Images</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="bouncing-ball ball1"></div>
+    <div class="bouncing-ball ball2"></div>
+    <div class="bouncing-ball ball3"></div>
+    <div class="bouncing-ball ball4"></div>
+    <div class="bouncing-ball ball5"></div>
+    <div class="bouncing-ball ball6"></div>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="./index.html">Dog Learning Hub</a></div>
+            <ul class="links">
+                    <li><a href="./my_images.html">圖片</a></li>
+                    <li><a href="./about.html">關於</a></li>
+                
+            </ul>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    
+        <div class="dropdown_menu">
+            {% if current_user.is_authenticated %}
+                <li><a href="my_images">圖片</a></li>
+                <li><a href="my_video">影片</a></li>
+                <li><a href="about">關於</a></li>
+                <li><a href="{{ url_for('logout')}}" class="action_btn">登出</a></li>
+                <li><a href="generate" class="action_btn">創作</a></li>
+                <span class="user_name">{{ current_user.username }}</span>
+            {% else %}
+                <li><a href="register">註冊</a></li>
+                <li><a href="login">登入</a></li>
+                <li><a href="about">關於</a></li>
+                <li><a href="login" class="action_btn">創作</a></li>
+            {% endif %}
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 class="text-center">Your Images</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="image/dog1.jpg" class="img-fluid mb-3" alt="Dog 1">
+                <p>Dog 1 (Chow Chow): A cute and fluffy Chow Chow known for its lion-like mane and calm demeanor.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="image/dog2.jpg" class="img-fluid mb-3" alt="Dog 2">
+                <p>Dog 2 (Dachshund): A playful Dachshund, also known as a sausage dog, with a long body and short legs.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="image/dog3.jpg" class="img-fluid mb-3" alt="Dog 3">
+                <p>Dog 3 (Australian Shepherd): An intelligent and energetic Australian Shepherd, perfect for herding and agility.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="image/dog4.jpg" class="img-fluid mb-3" alt="Dog 4">
+                <p>Dog 4 (German Shepherd): A loyal and brave German Shepherd, often used in police and military roles.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="image/dog5.jpg" class="img-fluid mb-3" alt="Dog 5">
+                <p>Dog 5 (Bulldog): A stocky and muscular Bulldog with a distinctive pushed-in nose and wrinkled face.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="image/dog6.jpg" class="img-fluid mb-3" alt="Dog 6">
+                <p>Dog 6 (Dachshund): A charming long-haired Dachshund with a silky coat and affectionate nature.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="./static/js/navbar.js"></script>    
+</body>
+</html>

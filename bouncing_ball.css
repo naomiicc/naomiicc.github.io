@@ -1,0 +1,146 @@
+.bouncing-ball {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.ball1 {
+    background-color: rgba(0, 0, 255, 0.5); /* Transparent blue */
+    animation: bounce1 50s infinite;
+}
+
+.ball2 {
+    background-color: rgba(247, 0, 255, 0.5); /* Transparent pink */
+    animation: bounce2 55s infinite;
+}
+
+.ball3 {
+    background-color: rgba(9, 255, 0, 0.5); /* Transparent green */
+    animation: bounce3 60s infinite;
+}
+
+.ball4 {
+    background-color: rgba(0, 255, 255, 0.5); /* Transparent cyan */
+    animation: bounce4 65s infinite;
+}
+
+.ball5 {
+    background-color: rgba(255, 255, 0, 0.5); /* Transparent yellow */
+    animation: bounce5 70s infinite;
+}
+
+.ball6 {
+    background-color: rgba(255, 0, 0, 0.5); /* Transparent red */
+    animation: bounce6 75s infinite;
+}
+
+@keyframes bounce1 {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    25% {
+        transform: translate(100vw, 50vh) scale(1.5);
+    }
+    50% {
+        transform: translate(-100vw, -50vh) scale(5);
+    }
+    75% {
+        transform: translate(100vw, -50vh) scale(0.5);
+    }
+    100% {
+        transform: translate(0, 0) scale(10);
+    }
+}
+
+@keyframes bounce2 {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    25% {
+        transform: translate(-100vw, -50vh) scale(1.5);
+    }
+    50% {
+        transform: translate(100vw, 50vh) scale(5);
+    }
+    75% {
+        transform: translate(-100vw, 50vh) scale(0.5);
+    }
+    100% {
+        transform: translate(0, 0) scale(10);
+    }
+}
+
+@keyframes bounce3 {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    25% {
+        transform: translate(50vw, -50vh) scale(1.5);
+    }
+    50% {
+        transform: translate(-50vw, 50vh) scale(5);
+    }
+    75% {
+        transform: translate(50vw, 50vh) scale(0.5);
+    }
+    100% {
+        transform: translate(0, 0) scale(10);
+    }
+}
+
+@keyframes bounce4 {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    25% {
+        transform: translate(-50vw, 50vh) scale(1.5);
+    }
+    50% {
+        transform: translate(50vw, -50vh) scale(5);
+    }
+    75% {
+        transform: translate(-50vw, -50vh) scale(0.5);
+    }
+    100% {
+        transform: translate(0, 0) scale(10);
+    }
+}
+
+@keyframes bounce5 {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    25% {
+        transform: translate(50vw, 25vh) scale(1.5);
+    }
+    50% {
+        transform: translate(-50vw, -25vh) scale(5);
+    }
+    75% {
+        transform: translate(50vw, -25vh) scale(0.5);
+    }
+    100% {
+        transform: translate(0, 0) scale(10);
+    }
+}
+
+@keyframes bounce6 {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    25% {
+        transform: translate(-50vw, -25vh) scale(1.5);
+    }
+    50% {
+        transform: translate(50vw, 25vh) scale(5);
+    }
+    75% {
+        transform: translate(-50vw, 25vh) scale(0.5);
+    }
+    100% {
+        transform: translate(0, 0) scale(10);
+    }
+}
